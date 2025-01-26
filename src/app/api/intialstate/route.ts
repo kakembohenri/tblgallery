@@ -1,10 +1,10 @@
 import { google } from "googleapis";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Define the scope for Google Drive API
 const SCOPES = ["https://www.googleapis.com/auth/drive"];
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const folderMIMEType = "application/vnd.google-apps.folder";
     const auth = new google.auth.GoogleAuth({
@@ -55,7 +55,7 @@ export async function GET(req: NextRequest) {
 
       if (!fans) return NextResponse.json({ result: [] }, { status: 200 });
 
-      let returnedPics = [];
+      const returnedPics = [];
 
       const res = await drive.files.list({
         q: `'${fans[0].id}' in parents`, // Query to list files in the folder

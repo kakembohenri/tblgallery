@@ -1,10 +1,10 @@
 import { google } from "googleapis";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Define the scope for Google Drive API
 const SCOPES = ["https://www.googleapis.com/auth/drive"];
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const folderIds = [
       process.env.NEXT_PUBLIC_TBL07,

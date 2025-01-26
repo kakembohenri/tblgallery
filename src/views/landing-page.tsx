@@ -66,7 +66,7 @@ export default function Gallery() {
     dedupingInterval: 86400000,
   });
 
-  let images = requestedImages
+  const images = requestedImages
     ? requestedImages.result
     : initialImages
     ? initialImages.result
@@ -145,7 +145,7 @@ export default function Gallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {displayedImages.length === 0
-            ? [1, 2, 3].map((item: any) => (
+            ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item: any) => (
                 <Skeleton
                   key={item}
                   className="w-full aspect-video object-cover rounded-lg transition-transform group-hover:scale-[1.02]"
