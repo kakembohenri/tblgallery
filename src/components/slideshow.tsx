@@ -47,9 +47,10 @@ export function Slideshow({ images, onClose }: SlideshowProps) {
           // alt={image.title}
           width={50}
           height={50}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, (max-height: 768px) 100vh, (max-height: 1200px) 50vh, 33vh"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, (max-height: 400px) 100vh, (max-height: 1200px) 50vh, 33vh"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, (max-height: 400px) 100vh, (max-height: 1200px) 50vh, 33vh"
           alt={images[currentIndex]?.name}
-          className="w-full object-cover rounded-lg transition-transform group-hover:scale-[1.02]"
+          className="w-full object-cover rounded-lg transition-transform group-hover:scale-[1.02] max-h-[90vh]"
         />
         <div className="flex justify-center items-center gap-4 mt-4">
           <Button

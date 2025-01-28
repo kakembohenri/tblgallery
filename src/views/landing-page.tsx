@@ -118,7 +118,9 @@ export default function Gallery() {
     <div className="min-h-screen bg-red-50 py-12 px-4 relative">
       <BackgroundPattern />
       <div className="container mx-auto relative z-10">
-        <h1 className="text-4xl font-bold text-center mb-8">Photo Gallery</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">
+          TBL Photo Gallery
+        </h1>
 
         <div className="flex flex-col items-center mb-8">
           <Filter
